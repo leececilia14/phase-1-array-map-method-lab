@@ -9,15 +9,18 @@ const tutorials = [
   'what is the difference between == and ===?',
   'what is the difference between event capturing and bubbling?',
   'what is JSONP?'
-];
+]; 
 
 
-const titleCased = (input) => {
-  return tutorials.map( line => {
-    const tokens = line.split(' ');
-    const capitalizedTokens =
-      tokens.map( token => token.charAt(0).toUpperCase() + token.slice(1) );
-    const response = capitalizedTokens.join(' ');
-    return response;
-  });
-}
+  const titleCased = (input) => {
+    return tutorials.map( line => {
+      const tokens = line.split(' ');
+      const capitalizedTokens =
+        tokens.map( token => token.charAt(0).toUpperCase() + token.slice(1) );
+      const response = capitalizedTokens.join(' ');
+      return response;
+    });
+  }
+  
+  titleCased(tutorials);
+
